@@ -2274,59 +2274,8 @@ button,
     padding-top: 0; }
 
 /* Container fixo no canto superior direito */
-#translate-wrapper {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  z-index: 9999;
-}
-
-/* Botão moderno */
-#translate-btn {
-  background: linear-gradient(135deg, #0078ff, #00c6ff);
-  color: white;
-  border: none;
-  border-radius: 12px;
-  padding: 10px 16px;
-  font-size: 15px;
-  font-weight: 500;
-  cursor: pointer;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-  transition: all 0.3s ease;
-}
-
-#translate-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
-}
-
-/* Esconde o seletor padrão até abrir */
-.hidden {
-  display: none;
-}
-
-/* Estilo do seletor quando aberto */
-#google_translate_element {
-  margin-top: 10px;
-  background: #fff;
-  border-radius: 10px;
-  padding: 8px 10px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
-}
-
-.goog-te-gadget {
-  font-family: 'Inter', sans-serif !important;
-  color: #333 !important;
-}
-
-.goog-te-combo {
-  border: none;
-  background: #f0f2f5;
-  border-radius: 6px;
-  padding: 8px;
-  font-size: 14px;
-  outline: none;
-  width: 130px;
-}
+<style>
+.hide { display: none; opacity: 0; }.show { display: block; opacity: 1; } #Anutrickz_translateBTN { position:absolute;top:17px;right:70px; z-index: 99; }#Anutrickz_translateBTN svg{width:24px;height:24px} #ATLang_list { width: 10rem; right: 0px; box-shadow: 0 0 15px rgb(0 0 0 / 7%); border-radius: 0.5rem; position: absolute; z-index: 9; background: #fff; top: 100%; color: #000;} #ATLang_list li { list-style: none; line-height: 1.5rem; font-size: .875rem; font-weight: 600;cursor:pointer; padding-left: 0.75rem; padding-right: 0.75rem; padding-top: 0.25rem; padding-bottom: 0.25rem;} #ATLang_list ul{margin:0 auto} #Anutrickz_translateBTN.hover #ATLang_list{display:block}.language-active {color: green;}.language-list{cursor:pointer;margin:3px;align-items:center}#goog-gt-tt,.goog-te-banner-frame{display:none!important}
+</style>
 
 
