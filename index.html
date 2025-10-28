@@ -11,11 +11,40 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 	</head>
-	<body class="is-preload">
-		<!-- Botão de tradução (Português / Inglês / Espanhol) -->
-		<div id="google_translate_element" 
-	     style="position: fixed; top: 15px; right: 15px; z-index: 9999;">
-		 </div>
+<!-- Tradução moderna -->
+<div id="translate-wrapper">
+	  <button id="translate-btn">
+	    🌐 Idioma ▾
+	  </button>
+	  <div id="google_translate_element" class="hidden"></div>
+	</div>
+	
+	<script type="text/javascript">
+	  function googleTranslateElementInit() {
+	    new google.translate.TranslateElement(
+	      {
+	        pageLanguage: 'pt',
+	        includedLanguages: 'en,es',
+	        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+	      },
+	      'google_translate_element'
+	    );
+	  }
+	
+	  // Carrega script do Google
+	  const gScript = document.createElement('script');
+	  gScript.src = "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+	  document.body.appendChild(gScript);
+	
+	  // Toggle moderno
+	  document.addEventListener("DOMContentLoaded", () => {
+	    const btn = document.getElementById("translate-btn");
+	    const box = document.getElementById("google_translate_element");
+	    btn.addEventListener("click", () => {
+	      box.classList.toggle("hidden");
+	    });
+	  });
+	</script>
 
 		<!-- Wrapper -->
 			<div id="wrapper">
@@ -252,25 +281,7 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-			<!-- Script do Google Translate -->
-			<script type="text/javascript">
-			  function googleTranslateElementInit() {
-			    new google.translate.TranslateElement(
-			      {
-			        pageLanguage: 'pt', // idioma original do site
-			        includedLanguages: 'en,es', // idiomas disponíveis: inglês e espanhol
-			        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-			      },
-			      'google_translate_element'
-			    );
-			  }
-			</script>
-			
-			<script type="text/javascript" 
-			        src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
-			</script>
-
-
 	</body>
 </html>
+
 
